@@ -1,0 +1,11 @@
+# Log started on 09/06/2022 [mm/dd/yyyy] at 16:49:29
+# Command line arguments: system.parm7
+# Loaded topologies: system.parm7
+printDetails
+printDetails @4686
+changeLJSingleType :WAT@H1 0.3019 0.047
+changeLJSingleType :WAT@H2 0.3019 0.047
+changeLJSingleType :SER@HG 0.3019 0.047
+changeLJSingleType :TYR@HH 0.3019 0.047
+outparm system_LJ_mod.parm7
+quit

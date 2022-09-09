@@ -1,0 +1,144 @@
+
+          -------------------------------------------------------
+          Amber 22 SANDER                              2022
+          -------------------------------------------------------
+
+| Run on 09/05/2022 at 13:42:45
+
+|   Executable path: /Users/nj465/opt/anaconda3/envs/AmberTools22/bin/sander
+| Working directory: /Users/nj465/Desktop/amber-tutorial_1
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: sander_heat_1.in                                                      
+| MDOUT: heat_classical_1.out                                                  
+|INPCRD: system.heat.rst7                                                      
+|  PARM: system.parm7                                                          
+|RESTRT: system.heat1.rst7                                                     
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: system.heat1.nc                                                       
+|MDINFO: mdinfo                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Heating ramp from 0K to 300K                                                   
+ &cntrl                                                                        
+  imin=0,                   ! Run molecular dynamics.                          
+  ntx=1,                    ! Initial file contains coordinates, but no velocities.
+  irest=1,                  ! Do not restart the simulation, (only read coordinates from the coordinates file)
+  nstlim=30000,             ! Number of MD-steps to be performed.              
+  dt=0.002,                 ! Time step (ps)                                   
+  ntf=2, ntc=2,             ! Constrain lengths of bonds having hydrogen atoms (SHAKE)
+  tempi=96.0, temp0=298.0,   ! Initial and final temperature                   
+  ntpr=500, ntwx=500,       ! Output options                                   
+  cut=8.0,                  ! non-bond cut off                                 
+  ntb=1,                    ! Periodic conditiond at constant volume           
+  ntp=0,                    ! No pressure scaling                              
+  ntt=3, gamma_ln=2.0,      ! Temperature scaling using Langevin dynamics with the collision frequency in gamma_ln (ps−1)
+  ig=-1,                    ! seed for the pseudo-random number generator will be based on the current date and time.
+  nmropt=1,                 ! NMR options to give the temperature ramp.        
+ /                                                                             
+&wt type='TEMP0', istep1=15000, istep2=20000, value1=96, value2=298.0 /        
+&wt type='TEMP0', istep1=20000, istep2=30000, value1=298.0, value2=298.0 /     
+&wt type='END' /                                                               
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+ getting box info from netcdf restart file
+| NetCDF restart box info found
+|Largest sphere to fit in unit cell has radius =    52.979
+| New format PARM file being parsed.
+| Version =    1.000 Date = 09/05/22 Time = 10:33:25
+ NATOM  =  102594 NTYPES =      25 NBONH =  100226 MBONA  =    2417
+ NTHETH =    5236 MTHETA =    3284 NPHIH =   10790 MPHIA  =   10497
+ NHPARM =       0 NPARM  =       0 NNB   =  156318 NRES   =   32946
+ NBONA  =    2417 NTHETA =    3284 NPHIA =   10497 NUMBND =      78
+ NUMANG =     170 NPTRA  =     209 NATYP =      46 NPHB   =       0
+ IFBOX  =       1 NMXRS  =      34 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real             7359919
+|     Hollerith         340730
+|     Integer          3367888
+|     Max Pairs       34198000
+|     nblistReal       1231128
+|     nblist Int       5225690
+|       Total           235603 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: RECTILINEAR
+Note: ig = -1. Setting random seed to   587257 based on wallclock time in microseconds.
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+GWS                                                                             
+
+General flags:
+     imin    =       0, nmropt  =       1
+
+Nature and format of input:
+     ntx     =       1, irest   =       1, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =     500, ntrx    =       1, ntwr    =   30000
+     iwrap   =       0, ntwx    =     500, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =   8.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Molecular dynamics:
+     nstlim  =     30000, nscm    =      1000, nrespa  =         1
+     t       =   0.00000, dt      =   0.00200, vlimit  =  20.00000
+
+Langevin dynamics temperature regulation:
+     ig      =  587257
+     temp0   = 298.00000, tempi   =  96.00000, gamma_ln=   2.00000
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+NMR refinement options:
+     iscale  =       0, noeskp  =       1, ipnlty  =       1, mxsub   =       1
+     scalm   = 100.00000, pencut  =   0.10000, tausw   =   0.10000
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       1
+     Box X =  106.253   Box Y =  105.957   Box Z =  106.341
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =  108       NFFT2 =  108       NFFT3 =  108
+     Cutoff=    8.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.34864
+     Interpolation order =    4
+
+  NTX / IREST inconsistency
+
+ *** input error(s)

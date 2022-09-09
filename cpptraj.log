@@ -1,0 +1,9 @@
+# 09/06/22 16:57:44
+# Args:  -p system_LJ_mod.parm7
+# Loaded topologies:
+#   system_LJ_mod.parm7
+trajin system.equili.rst7
+autoimage
+trajout system.equili0.rst7 inpcrd
+go
+quit
