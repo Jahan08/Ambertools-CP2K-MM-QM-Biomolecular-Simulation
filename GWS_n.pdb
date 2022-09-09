@@ -1,0 +1,26 @@
+HEADER    PROTEIN                                 04-SEP-22   NONE
+TITLE     NULL                                                        
+COMPND    NULL                                                        
+SOURCE    NULL                                                        
+KEYWDS    NULL                                                        
+EXPDTA    NULL                                                        
+AUTHOR    Marvin                                                      
+REVDAT   1   04-SEP-22         0                                  
+ATOM      1  N   ALA     0       3.974   1.284   0.000  0.00  0.00           N+0
+ATOM      2  C   ALA     0       2.635   0.606   0.000  0.00  0.00           C+0
+ATOM      3  C   ALA     0       5.229   0.464   0.000  0.00  0.00           C+0
+ATOM      4  C   ALA     0       2.553  -0.892   0.000  0.00  0.00           C+0
+ATOM      5  C   ALA     0       5.147  -1.034   0.000  0.00  0.00           C+0
+ATOM      6  C   ALA     0       3.809  -1.712   0.000  0.00  0.00           C+0
+ATOM      7  N   ALA     0       1.215  -1.569   0.000  0.00  0.00           N+0
+ATOM      8  C   ALA     0      -0.041  -0.749   0.000  0.00  0.00           C+0
+ATOM      9  C   ALA     0      -1.379  -1.426   0.000  0.00  0.00           C+0
+ATOM     10  C   ALA     0      -2.635  -0.606   0.000  0.00  0.00           C+0
+ATOM     11  O   ALA     0       0.041   0.749   0.000  0.00  0.00           O+0
+ATOM     12  C   ALA     0      -2.553   0.892   0.000  0.00  0.00           C+0
+ATOM     13  C   ALA     0      -3.809   1.712   0.000  0.00  0.00           C+0
+ATOM     14  C   ALA     0      -5.147   1.034   0.000  0.00  0.00           C+0
+ATOM     15  C   ALA     0      -5.229  -0.464   0.000  0.00  0.00           C+0
+ATOM     16  C   ALA     0      -3.974  -1.284   0.000  0.00  0.00           C+0
+MASTER        0    0    0    0    0    0    0    0   16    0    0    0
+END

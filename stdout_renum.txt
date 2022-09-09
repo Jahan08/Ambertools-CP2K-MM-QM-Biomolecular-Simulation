@@ -1,0 +1,13 @@
+  G A     1      G     1
+  G A     2      G     2
+  U A     3      U     3
+  G A     4      G     4
+  C A     5      C     5
+  A A     6      A     6
+  U A     7      U     7
+  A A     8      A     8
+  G A     9      G     9
+  C A    10      C    10
+  A A    11      A    11
+  C A    12      C    12
+  C A    13      C    13
